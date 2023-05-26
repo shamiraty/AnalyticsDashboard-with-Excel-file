@@ -53,7 +53,7 @@ def HomePage():
   #1. print dataframe
  with st.expander("🧭 My database"):
   #st.dataframe(df_selection,use_container_width=True)
-  shwdata = st.multiselect('Filter :', df_selection.columns, default=["Location","State","Region","Investment","Construction","BusinessType","Earthquake"])
+  shwdata = st.multiselect('Filter :', df_selection.columns, default=[])
   st.dataframe(df_selection[shwdata],use_container_width=True)
 
  #2. compute top Analytics
